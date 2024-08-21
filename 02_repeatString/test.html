@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+const people = [
+      {
+        name: "Carly",
+        yearOfBirth: 1942,
+        yearOfDeath: 1970,
+      },
+      {
+        name: "Ray",
+        yearOfBirth: 1962,
+        yearOfDeath: 2011,
+      },
+      {
+        name: "Jane",
+        yearOfBirth: 1912,
+        yearOfDeath: 1941,
+      },
+
+
+    ]
+
+    const ages = [];
+    const findTheOldest = function(people) { 
+        people.forEach((element) => {
+        let age = element.yearOfDeath - element.yearOfBirth;
+            ages.push(age);
+        console.log(age);
+    });
+    console.log(ages);
+    let maxAge = Math.max(...ages);
+    console.log(maxAge);
+        people.forEach((element) => {
+            let age = element.yearOfDeath - element.yearOfBirth;
+            if (maxAge == age){
+             oldest = element;
+            }
+        });
+        return oldest;
+    };
+    console.log(findTheOldest(people));
+    /*const findTheOldest = function(people) {
+        people.forEach((element) => {
+         let  age =  element.yearOfDeath - element.yearOfDeath;
+          console.log(age);
+        });
+};*/
+//console.log(findTheOldest());
+
+/*const arrayTitles = [];
+    const getTheTitles = function(books) {
+        books.forEach((element) =>
+        arrayTitles.push(element.title));
+        return arrayTitles;
+};*/
+
+//console.log(getTheTitles(books));
+
+
+//console.log(books[1]);
+//console.log(books[1].title);
+
+
+/*
+function isLetter(char) {
+if( typeof char == "string" && char.toUpperCase() != char.toLowerCase() )
+return char;
+else
+return char + " is not a letter";
+}; */
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
